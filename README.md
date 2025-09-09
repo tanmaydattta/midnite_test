@@ -1,7 +1,7 @@
 # midnite_test
 Test code for midnite
 
-[![CI](https://github.com/tanmaydattta/midnite_test/actions/workflows/tests.yml/badge.svg)](https://github.com/tanmaydattta/midnite_test/actions/workflows/tests.yml)
+[![CI](https://github.com/tanmaydattta/midnite_test/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/tanmaydattta/midnite_test/actions/workflows/tests.yml)
 
 # Unusual Activity Alert Service
 
