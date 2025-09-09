@@ -18,10 +18,10 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Build images
-        run: docker-compose build
+        run: docker compose build
 
       - name: Run mypy
-        run: docker-compose run --rm mypy
+        run: docker compose run --rm mypy
 
       - name: Run pytest
-        run: docker-compose run --rm test
+        run: docker compose run --rm test
