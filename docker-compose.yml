@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  midnite_api:
+    build: .
+    container_name: midnite_api
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - .:/app
+  test:
+    build: .
+    container_name: midnite_api_test
+    volumes:
+      - .:/app
+    command: pytest
+
+  mypy:
+    build: .
+    container_name: midnite_api_mypy
+    volumes:
+      - .:/app
+    command: mypy .

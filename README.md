@@ -15,9 +15,13 @@ This project implements a Flask-based API to detect suspicious user transactions
 ## Run locally
 ```bash
 pip install -r requirements.txt
-python app.py
+python -m midnite_api.app
 
 ## Docker
      Docker support for tests and running the api
-    - Docker compose up 
-    - Docker compose test
+    --- to Build and run API
+    - Docker compose up  --build midnite_api
+    --- to test and run just the tests 
+    - Docker compose run test
+    --- to check mypy
+    - Docker compose run mypy
