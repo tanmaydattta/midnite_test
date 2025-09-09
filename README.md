@@ -17,10 +17,43 @@ This project implements a Flask-based API to detect suspicious user transactions
 
 ## Run locally
 ```bash
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate   # on macOS/Linux
+venv\Scripts\activate      # on Windows
+
+# Install dependencies
 pip install -r requirements.txt
+
 python -m midnite_api.app
 
-## Docker
+## or if you like traditional flask way 
+
+```bash
+export FLASK_APP=midnite_api.app
+export FLASK_ENV=development
+flask run --host=0.0.0.0 --port=5000 --reload
+
+The API should be available at:
+http://127.0.0.1:5000/event
+
+```
+
+## just run tests and mypy
+Ensure you are in the correct virtualenv and use 
+```bash
+
+mypy
+and 
+pytest
+
+```
+
+
+## With docker
+
+
+```bash
      Docker support for tests and running the api
     --- to Build and run API
     - Docker compose up  --build midnite_api
@@ -28,3 +61,26 @@ python -m midnite_api.app
     - Docker compose run test
     --- to check mypy
     - Docker compose run mypy
+```
+
+
+
+## Example cURL Request (can be extended to postman)
+
+```bash
+curl -XPOST http://127.0.0.1:5000/event -H 'Content-Type: application/json' \
+-d '{"type": "deposit", "amount": "42.00", "user_id": 1, "t": 0}'
+
+
+```
+## Expected response format:
+
+```bash
+curl -XPOST http://127.0.0.1:5000/event -H 'Content-Type: application/json' \
+{
+  "alert": false,
+  "alert_codes": [],
+  "user_id": 1
+}
+
+```
