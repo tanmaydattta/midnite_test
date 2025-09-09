@@ -1,5 +1,8 @@
 # midnite_test
 Test code for midnite
+
+[![CI](https://github.com/tanmaydattta/midnite_test/actions/workflows/tests.yml/badge.svg)](https://github.com/tanmaydattta/midnite_test/actions/workflows/tests.yml)
+
 # Unusual Activity Alert Service
 
 This project implements a Flask-based API to detect suspicious user transactions based on predefined rules.
