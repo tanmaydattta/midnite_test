@@ -1,6 +1,6 @@
 # midnite_test
 Test code for midnite
-# Fraud Alert Service
+# Unusual Activity Alert Service
 
 This project implements a Flask-based API to detect suspicious user transactions based on predefined rules.
 
